@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, cyan, whitesmoke);
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.calculator {
+  position: relative;
+  height: auto;
+  width: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 30px rgb(82, 99, 128);
+  background-color: white;
+  /*dark theme*/
+}
+.calculator #display {
+  color: rgb(95, 95, 95);
+  margin: 0 10px;
+  height: 120px;
+  width: auto;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  font-size: 30px;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.calculator #clear {
+  background-color: rgb(245, 215, 215);
+  color: rgb(225, 125, 125);
+}
+.calculator #equal {
+  height: 130px;
+}
+.calculator .btn-number {
+  background-color: whitesmoke;
+  color: black;
+}
+.calculator .btn-operator {
+  background-color: rgb(240, 200, 240);
+  color: rgb(225, 100, 225);
+}
+.calculator .btn-equal {
+  background-color: rgb(200, 235, 205);
+  color: rgb(50, 215, 75);
+}
+.calculator.dark {
+  background-color: rgb(30, 30, 30);
+}
+.calculator.dark #display {
+  color: whitesmoke;
+}
+.calculator.dark #clear {
+  background-color: rgb(200, 75, 75);
+  color: whitesmoke;
+}
+.calculator.dark .btn-number {
+  background-color: rgb(100, 125, 125);
+  color: whitesmoke;
+}
+.calculator.dark .btn-operator {
+  background-color: rgb(75, 190, 75);
+  color: whitesmoke;
+}
+.calculator.dark .btn-equal {
+  background-color: rgb(80, 70, 200);
+  color: whitesmoke;
+}
+
+.theme-toggler {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1;
+}
+.theme-toggler::before {
+  content: "";
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: #333;
+  z-index: -1;
+}
+
+.theme-toggler.active {
+  color: #333;
+}
+.theme-toggler.active::before {
+  background-color: #fff;
+}
+
+button {
+  height: 60px;
+  width: 60px;
+  border: 0;
+  border-radius: 30px;
+  margin: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+button:hover {
+  transform: scale(1.1);
+}/*# sourceMappingURL=style.css.map */
